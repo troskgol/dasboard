@@ -7,6 +7,9 @@ import State from '../state'
 Vue.use(Router)
 
 export default new Router({
+  /*
+  a simple Vue router
+   */
   routes: [
     {
       path: '/',

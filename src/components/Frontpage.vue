@@ -15,6 +15,7 @@
 
     <b-card-group class="card-wrapper" deck>
       <b-card title="Passersby">
+        <!-- this one is made in a "time-efficient" manner. -->
         <table class="passersby-table">
           <tr><td>Total:</td><td>{{ passersby.total }}</td></tr>
           <tr><td>Total potential:</td><td>{{ passersby.total_potential }}</td></tr>
@@ -37,15 +38,10 @@
 </template>
 
 <script>
-  import Pie from './cssPie'
-
   export default {
     props:{
       metrics: Object,
       passersby: Object
-    },
-    components:{
-      Pie
     },
     computed:{
       captureRate(){

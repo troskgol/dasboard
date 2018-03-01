@@ -18,7 +18,6 @@
 
   export default {
     name: 'layout',
-
     components: {
       Navbar
     }

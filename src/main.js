@@ -1,5 +1,7 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+//sarcasm
+//*make sure to import as many npm modules as you can
+//*the ultimate goal is to create an app with imports alone and no extra code
+//end-sarcasm
 import Vue from 'vue'
 import BootstrapVue from "bootstrap-vue"
 import App from './App'

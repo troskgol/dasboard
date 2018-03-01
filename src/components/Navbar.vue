@@ -1,10 +1,4 @@
 <template>
-  <!--<b-navbar toggleable="md" type="dark" variant="dark" fixed="top">
-    <b-navbar-brand class="brand" href="#">DAS BOARD</b-navbar-brand>
-    <b-nav-item to="frontpage">Front Page</b-nav-item>
-    <b-nav-item to="powerhours">Power Hours</b-nav-item>
-    DUmmy User
-  </b-navbar>-->
   <b-navbar toggleable="md" type="dark" variant="dark">
 
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
@@ -17,7 +11,6 @@
         <b-nav-item to="frontpage">Front Page</b-nav-item>
         <b-nav-item to="powerhours">Power Hours</b-nav-item>
       </b-navbar-nav>
-
 
     </b-collapse>
   </b-navbar>

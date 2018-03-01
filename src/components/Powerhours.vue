@@ -8,7 +8,9 @@
           </tr>
 
           <tr class="table-row" v-for="row in calendarData">
-            <!-- manually add columns to ensure correct order -->
+            <!--
+            manually add columns to ensure correct order
+            -->
             <td >{{ row.hour }}:00</td>
             <td :style="getHeatColor( row.Monday )">{{ row.Monday }}</td>
             <td :style="getHeatColor( row.Tuesday )">{{ row.Tuesday }}</td>
@@ -33,14 +35,16 @@
       calendarData: { type: Array, required: true }
     },
     data(){
+      //to infinity and beyond!
       return {
         min: Infinity,
         max: -Infinity
       }
     },
-    computed: {
-    },
     methods: {
+      /*
+      calculate the (green) heat in rgb by normalizing the current values to 0-255
+       */
       getHeatColor( value ){
         if( this.min == Infinity ){
           this.getMinMax()
@@ -49,10 +53,12 @@
         let max = this.max-this.min
         let valueN = value - this.min
         //calculate where on a 255 scale we are
-        let intensity = Math.floor(255 * (1-  valueN/max ))
-        console.log(value +" "+valueN/max+" " +intensity)
-        return "background-color: rgb("+intensity+",255,"+intensity+");"//box-shadow: 10px 10px 50px 10px rgb("+intensity+",255,"+intensity+");"
+        let intensity = Math.floor(255 * ( 1- valueN/max ))
+        return "background-color: rgb("+intensity+",255,"+intensity+");"
       },
+      /*
+      loop though data and get min and max
+       */
       getMinMax(){
         for( let index in this.calendarData){
           let filtered = Object.values( this.calendarData[index] ).filter(e=> typeof e == "number")
@@ -86,7 +92,9 @@
   .table-row td {
     padding:0.5em;
   }
-
+  /*
+  some small adjustments for ancient devices that will never visit this site
+  */
   @media only screen and (max-width: 800px) {
     .table-row td {
       padding:0.1em;

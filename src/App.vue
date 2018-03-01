@@ -25,7 +25,7 @@
   background: #eee url("./assets/stolen-picture.jpg") no-repeat fixed center;
   background-size: cover;
 }
-  body, html{
-    height: 100%;
-  }
+body, html{
+  height: 100%;
+}
 </style>
